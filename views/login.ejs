@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-horizontal" style="margin-top: 100px" role="form" method="POST" action="/login">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center">
+                        <h2>Đăng nhập hệ thống</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group has-danger">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem; line-height: 40px"><i class="fas fa-at"></i></div>
+                                <input type="text" name="username" class="form-control" id="username"
+                                    placeholder="Tên đăng nhập" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem; line-height: 40px"><i class="fa fa-key"></i></div>
+                                <input type="password" name="password" required class="form-control" id="password"
+                                    placeholder="Mật khẩu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="padding-top: .35rem">
+                        <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="remember"
+                                    type="checkbox" >
+                                <span style="padding-bottom: .15rem">Ghi nhớ mật khẩu</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 1rem">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Đăng nhập</button>
+                        <a class="btn btn-link" href="/password/reset">Quên mật khẩu?</a>
+                        <button type="button" class="btn btn-primary float-right" onclick="window.location = '/register';">Đăng ký tài khoản</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/notify.min.js"></script>
+    <% if (messageSuccess && messageSuccess.length > 0) { %>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.notify('<%= messageSuccess %>', 'success');
+            });
+        </script>
+    <% } %>
+
+    <% if (loginError && loginError.length > 0) { %>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.notify('<%= loginError %>', 'error');
+            });
+        </script>
+    <% } %>
+</html>

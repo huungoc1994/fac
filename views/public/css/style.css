@@ -1,0 +1,371 @@
+.hidden {
+    display: none
+}
+.has-error, .has-error:focus {
+    border: red 2px solid
+}
+.navbar-fb, .bg-fb {
+    background: #4267b2;
+}
+ul li {
+    list-style: none
+}
+.navbar-expand-sm {
+    height: 40px
+}
+.navbar-fb a, .navbar-fb i, .bg-fb a, .bg-fb p, .bg-fb i {
+    color: white;
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    padding: 6px 15px
+}
+#menu-top {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.navbar-expand-sm .navbar-nav .nav-link:hover {
+    background: rgba(0, 0, 0, .1);
+}
+.navbar-expand-xl .navbar-nav .nav-link {
+    padding: 6px 15px
+}
+.navbar-expand-xl .navbar-nav .nav-link:hover {
+    background: rgba(0, 0, 0, .1);
+    color: #66afe9
+}
+.navbar-expand-xl {
+    height: 80px;
+}
+
+#user-avatar {
+    width: 60px;
+    height: 60px;
+    float: left;
+    line-height: 60px
+}
+#user-avatar img {
+    width: 100%;
+    height: 100%
+}
+#user-info {
+    float: right;
+    padding-left: 15px
+}
+#user-info a, #user-info span {
+    color: white
+}
+#user-info span {
+    font-size: 13px
+}
+#username {
+    line-height: 1
+}
+#phone {
+    margin-top: 10px
+}
+#phone, #email {
+    line-height: 1.3
+}
+#phone span, #email span {
+    color: #cdcdcd
+}
+
+.action-item {
+    color: black;
+    font-size: 10px;
+    padding: 1px 3px;
+    border: 1px solid #000000
+}
+.fanpage-content ul li {
+    line-height: 2.3
+}
+.ct_border {
+    position: relative
+}
+.ct_border:before {
+    content: " ";
+    position: absolute;
+    left:0;
+    border-left: 1px dotted #000000; 
+    height: calc(100% - 30px);
+    margin-top: 15px;
+    width: 1px;
+    overflow: hidden;
+}
+.ct_border li:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    border-top: 1px dotted #000000;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    overflow: hidden;
+}
+.fanpage-content {
+    margin-left: 30px
+}
+.fanpage-content ul li span span:hover, .fanpage-content ul li span span.active {
+    cursor: pointer;
+    background: #cdcdcd;
+    text-decoration: none
+}
+.fanpage-content ul span {
+    color: black;
+    padding: 8px 10px 8px 0
+}
+.ct_action {
+    position: relative
+}
+.ct_action_toggle {
+    border: 1px solid #cdcdcd;
+    padding: 5px 0;
+    width: 200px;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 999999999999;
+    display: none
+}
+.ct_action_toggle a {
+    color: black;
+    padding: 0 15px;
+    display: block
+}
+.ct_action_toggle a:hover {
+    background: #edf2fa;
+    text-decoration: none
+}
+.ct_action_toggle a i {
+    font-size: 13px;
+    margin-right: 5px
+}
+
+/* Register page */
+#register-page {
+    background-image:url('../images/primag.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100vh;
+    overflow:auto;
+}
+/*-----for border----*/
+#register-page .container{
+    font-family:Roboto,sans-serif;
+    background-image:url("../images/dark-blue-blurred-background_1034-589.jpg") ;
+    border-style: 1px solid grey;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.8;
+    box-shadow: 2px 5px 5px 0px #eee;
+    max-width: 550px;
+    padding-top: 10px;
+    height: 520px;
+    margin-top: 50px;
+}
+/*--- for label of first and last name---*/
+#register-page .lastname{
+	 margin-left: 1px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 10px;
+}
+#register-page .firstname{
+	 margin-left: 1px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 5px;
+}
+#register-page #company{
+	 margin-top:5px;
+}
+	  
+#register-page .col-8 input {
+    line-height: 1.3 !important;
+    margin-top: 5px;
+}
+/*---for heading-----*/
+#register-page .heading{
+	 text-decoration:bold;
+	 text-align : center;
+	 font-size:30px;
+	 color:#F96;
+	 padding-top:10px;
+}
+
+/*-----------for Password--------*/
+     /*-------label-----*/
+#register-page .mail{
+     font-family: sans-serif;
+     color: white;
+     font-size: 14px;
+     margin-top: 13px;
+}
+#register-page .pass{
+	 color: white;
+     margin-top: 9px;
+     font-size: 14px;
+     font-family: sans-serif;
+     margin-top: 9px;
+}
+/*------------for phone Number--------*/
+      /*----------label--------*/
+#register-page .pno{
+	 font-size: 18px;
+     margin-left: -13px;
+     margin-top: 10px;
+     color: #ff9;
+}	
+
+/*--------------for Gender---------------*/
+     /*--------------label---------*/
+#register-page .gender {
+	 color: white;
+     font-family: sans-serif;
+     font-size: 14px;
+     margin-top: 8px;
+}
+
+     /*---------- for Input type--------*/
+#register-page .col-4.male{
+	 color: white;
+     font-size: 13px;
+     margin-top: 9px;
+     padding-bottom: 16px;
+}
+#register-page .col-4.female {
+     color: white;
+     font-size: 13px;
+     margin-top: 9px;
+     padding-bottom: 16px;
+	 padding-right: 95px;
+}	
+/*------------For submit button---------*/
+#register-page .sbutton{
+	 color: white;
+     font-size: 20px;
+     border: 1px solid white;
+     background-color: #080808;
+     width: 32%;
+     margin-left: 41%;
+     margin-top: 16px;
+	 box-shadow: 0px 2px 2px 0px white;
+}
+#register-page .btn.btn-warning:hover {
+    box-shadow: 2px 1px 2px 3px #99ccff;
+	background:#5900a6;
+	color:#fff;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+}
+#myModal .box-content {
+    height: 400px;
+    overflow-y: auto;
+}
+
+#myModal .box-action {
+    width: 100%
+}
+#myModal .modal-footer {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0
+}
+
+
+#myModal .modal-footer .box-b [name='browse'], #myModal .modal-footer .box-b .dropdown-toggle {
+    border: 1px solid #CCC;
+    border-right: none;
+    border-bottom: 0;
+    background: white;
+    margin: 0;
+    padding: .375rem .75rem;
+}
+#myModal .modal-footer .box-b [name='browse']:hover, #myModal .modal-footer .box-b .dropdown-toggle:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+#myModal .modal-footer .box-b [name='browse'] {
+    border-right: 1px solid #CCC;
+}
+#myModal .modal-footer .box-b .dropdown-toggle {
+    border-left: none;
+}
+#myModal .modal-footer [name='submit'] {
+    padding: .2rem 1rem;
+    margin-right: 5px;
+    border-radius: 0
+}
+#myModal .form-control:focus, #myModal .form-control, #myModal .modal-footer .box-b .dropdown-toggle:focus {
+    box-shadow: none;
+    border-radius: 0
+}
+.nhapkichban:focus, .nhapkichban {
+    border: none
+}
+#myModal button[name='insert-icon'], #myModal button[name='insert-icon']:focus {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: 0px auto -webkit-focus-ring-color;
+    color: #999999
+}
+#myModal button[name='insert-icon']:hover {
+    color: #111111
+}
+.box-content .msg {
+    font-family: inherit;
+    position: relative;
+    text-align: left;
+    direction: ltr;
+    zoom: 1;
+}
+.box-content .msg > ._aok {
+    background: #0084ff;
+    padding: 6px 25px 6px 12px;
+    color: white;
+    margin-bottom: 3px;
+    float: right;
+    clear: right;
+    border-radius: 4px;
+    max-width: 70%;
+}
+.box-content .msg:first-child > ._aok {
+    border-top-right-radius: 1.3em;
+    border-bottom-left-radius: 1.3em;
+    border-top-left-radius: 1.3em;
+}
+.box-content .msg:last-child > ._aok {
+    border-bottom-left-radius: 1.3em;
+    border-top-left-radius: 1.3em;
+    margin-bottom: 15px
+}
+.service .row {
+    border: 1px solid #CCC;
+    border-bottom: none;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px
+}
+.service .row img {
+    border-radius: 0.3em
+}
+.service .row:first-child {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em
+}
+.service .row:last-child {
+    border-bottom: 1px solid #CCC;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    margin-bottom: 15px;
+}

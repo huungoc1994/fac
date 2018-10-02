@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Đăng ký tài khoản</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    </head>
+    <body id="register-page">
+        <div class="container">
+            <header class="heading">Đăng ký tài khoản</header><hr style="border-top-color: #f5f5f5">
+            <form method="POST" action="/register" id="registerForm">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="firstname">Tên đăng nhập <span style="color: #F96">(*)</span></label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" required name="username" id="username" placeholder="Nhập tên đăng nhập của bạn." class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="lastname">Tên công ty:</label>
+                            </div>
+                            <div class ="col-8">	 
+                                <input type="text" name="company" id="company" placeholder="Nhập tên công ty của bạn." class="form-control last">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="mail">Địa chỉ:</label></div>
+                            <div class="col-8"	>	 
+                                <input type="text" name="address"  id="address"placeholder="Nhập địa chỉ của bạn." class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="mail">Email <span style="color: #F96">(*)</span></label></div>
+                            <div class="col-8"	>	 
+                                <input type="email" required name="email"  id="email"placeholder="Nhập email của bạn." class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="mail">Số điện thoại <span style="color: #F96">(*)</span></label></div>
+                            <div class="col-8"	>	 
+                                <input type="tel" required name="tel"  id="tel"placeholder="Nhập số điện thoại của bạn." class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="pass">Mật khẩu <span style="color: #F96">(*)</span></label>
+                            </div>
+                            <div class="col-8">
+                                <input type="password" required name="password" id="password" placeholder="Nhập mật khẩu của bạn" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <label class="pass">Nhập lại mật khẩu <span style="color: #F96">(*)</span></label>
+                            </div>
+                            <div class="col-8">
+                                <input type="password" required name="confirm_password" id="confirm_password" placeholder="Nhập lại mật khẩu" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <div class ="row">
+                            <div class="col-4 text-left">
+                                <label class="gender">Giới tính <span style="color: #F96">(*)</span></label>
+                            </div>
+                        
+                            <div class="col-4 male mt-2 text-left">	 
+                                <input type="radio" required name="gender" id="boy" value="boy">
+                                <label for="boy" class="ml-1">Nam</label>
+                            </div>
+                            
+                            <div class="col-4 female mt-2 text-left">
+                                <input type="radio" required name="gender" id="girl" value="girl" >
+                                <label for="girl" class="ml-1">Nữ</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 offset-sm-4 text-left">
+                            <button type="submit" id="registerSubmit" class="btn btn-warning">Đăng ký</button>
+                            <a href="/login" class="btn float-right">Đăng nhập</a>
+                        </div>
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </body>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/notify.min.js"></script>
+    <script type="text/javascript" src="js/action.js"></script>
+    <% if (messageError && messageError.length > 0) { %>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.notify('<%= messageError %>', 'error');
+            });
+        </script>
+    <% } %>
+</html>

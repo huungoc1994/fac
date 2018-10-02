@@ -1,0 +1,85 @@
+<!-- Thêm kịch bản -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header p-2 pl-3 pr-2">
+                <h4 class="modal-title" style="font-size: 18px">Thêm kịch bản</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="fb-box">
+                    <div class="box-content"></div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="box-action">
+                    <div class="box-t">
+                        <div class="input-group mb-3">
+                            <input type="text" autofocus class="form-control nhapkichban" placeholder="Nhập tin nhắn văn bản..." aria-label="nhapkichban" aria-describedby="basic-addon1">
+                            <div class="input-group-prepend">
+                                <a href="#" class="hidden" id="send-msg" style="line-height: 34px" label="send" title="Nhấn Enter để gửi" data-toggle="tooltip">
+                                    <svg height="16px" width="16px" version="1.1" viewBox="0 0 16 16" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" y="0px"><path d="M11,8.3L2.6,8.8C2.4,8.8,2.3,8.9,2.3,9l-1.2,4.1c-0.2,0.5,0,1.1,0.4,1.5C1.7,14.9,2,15,2.4,15c0.2,0,0.4,0,0.6-0.1l11.2-5.6 C14.8,9,15.1,8.4,15,7.8c-0.1-0.4-0.4-0.8-0.8-1L3,1.1C2.5,0.9,1.9,1,1.5,1.3C1,1.7,0.9,2.3,1.1,2.9L2.3,7c0,0.1,0.2,0.2,0.3,0.2 L11,7.7c0,0,0.3,0,0.3,0.3S11,8.3,11,8.3z" fill="#0084ff"></path></svg>
+                                </a>
+                                <button class="input-group-text" name="insert-icon" id="basic-addon1"><i class="far fa-smile"></i></s>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-b">
+                        <div class='float-left'>
+                            <div class="dropdown float-left">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Thêm dịch vụ
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" arie-action="sv_insert" id="sv_insert" data-targer="#sv_insert_modal" style="color: #428BCA"><i class="fa fa-plus-circle" style="font-size: 13px"></i> Thêm mới dịch vụ</a>
+                                </div>
+                            </div>
+                            <label class="float-left" name="browse" for="browse">Chọn tệp</label>
+                            <input type="file" id="browse" style="display: none" />
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-primary" name="submit" value="">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Thêm dịch vụ -->
+<div class="modal fade" id="sv_insert_modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header p-2 pl-3 pr-2">
+                <h4 class="modal-title" style="font-size: 18px">Thêm dịch vụ</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="/sv-insert" method="POST" class="form-inline">
+                    <div class="form-group">
+                        <label for="sv_name" class="mr-2">Tên dịch vụ:</label>
+                        <input type="text" class="form-control" id="sv_name" placeholder="VD: Thiết kế web" />
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary">Lưu</button>
+            </div>
+
+        </div>
+    </div>
+</div>
